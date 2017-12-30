@@ -1,0 +1,44 @@
+loc_data:
+  # restart: always
+  build: ./app
+  # image: gevin/octblog:0.2.4.2
+  ports:
+    - "10000:8000"
+      #- "5000:5000"
+  links:
+    - mysql:mysql
+    - redis:redis
+    #- mongo:mongo
+  # volumes:
+  #   - /usr/src/app/static
+  env_file: .env
+
+mysql:
+  # restart: always
+  image: mysql 
+  ports:
+    - "5306:3306"
+  volumes:
+    - ./mysql_data:/var/lib/mysql
+  environment:
+    - MYSQL_DATABASE=loc_data
+    - MYSQL_ROOT_PASSWORD=loc_data#123456
+
+#mongo:
+  # restart: always
+  #  image: mongo:latest
+  #  ports:
+  #  - "27017:27017"
+  #env_file: .env
+  #volumes:
+  #- /home/janl/code/python/loc_data/data/:/data
+
+redis:
+  image: redis:latest
+  ports:
+    - "8379:6379"
+  volumes:
+    - ./redis_data:/var/redis/data
+  environment:
+    LC_ALL: C.UTF-8
+

@@ -1,0 +1,6 @@
+flask
+flask-script
+flask-sqlalchemy
+marshmallow
+flask-wtf
+flask-login

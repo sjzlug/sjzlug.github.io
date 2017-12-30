@@ -1,0 +1,10 @@
+insert into sys_users(id,name,pw,nick,avatar,status,sheme,roles) values ('admin','admin','e10adc3949ba59abbe56e057f20f883e','管理员','/static/img/avatar.png',1,'default','admin,')
+insert into sys_cates(id,name,url,ico,[order],parent,status) values ('c1','ubuntu','/ubuntu','fa-linux',1,null,1)
+insert into sys_cates(id,name,url,ico,[order],parent,status) values ('c2','opensuse','/opensuse','fa-linux',1,null,1)
+insert into sys_cates(id,name,url,ico,[order],parent,status) values ('c1-1','传经布道','/learn','fa-sun-o',1,'c1',1)
+insert into sys_cates(id,name,url,ico,[order],parent,status) values ('c1-2','使用心得','/getit','fa-comment',1,'c1',1)
+insert into sys_posts(id,title,cate,subcate,pub_time,update_time,content_html,author,tags,status,hits,comments,last_comment_author,last_comment_time,up,down) values ('p1','Test Post 1','c1','c1-1','2017-12-30 10:22:15','2017-12-30 10:22:44',"<h1>Test Post 1</h1>",'admin','tag1,tag2',1,0,0,null,null,0,0)
+insert into sys_posts(id,title,cate,subcate,pub_time,update_time,content_html,author,tags,status,hits,comments,last_comment_author,last_comment_time,up,down) values ('p2','Test Post 2','c1','c1-2','2017-12-30 10:22:15','2017-12-30 10:22:44',"<h1>Test Post 2</h1>",'admin','tag3,tag4',1,0,0,null,null,0,0)
+insert into sys_comments(id,author,postid,html_content,pub_time,update_time,status) values ('comment1','admin','p1','<h2>comment 1</h2>','2017-12-30 10:32:35','2017-12-30 10:32:56',1)
+insert into sys_comments(id,author,postid,html_content,pub_time,update_time,status) values ('comment2','admin','p1','<h2>comment 2</h2>','2017-12-30 10:32:35','2017-12-30 10:32:56',1)
+
