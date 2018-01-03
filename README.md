@@ -9,5 +9,5 @@
 ### 花费
 1. 域名 sjzlug.org   52元。
 
-![微信](http://ozp0uwtgp.bkt.clouddn.com/wechat.jpg)
-![支付宝](http://ozp0uwtgp.bkt.clouddn.com/alipay.jpg)
+![微信](https://www.sjzlug.org/images/wechat.png)
+![支付宝](https://www.sjzlug.org/images/alipay.png)
